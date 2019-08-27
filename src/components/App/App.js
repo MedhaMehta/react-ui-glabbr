@@ -1,9 +1,11 @@
 import React from 'react';
 import styles from './App.css';
 import {Button} from "../Button/Button";
-import {DisabledButton} from "../Button/DisabledButton/DisabledButton";
-import {SuccessButton} from "../Button/SuccessButton/SuccessButton";
-import {InfoButton} from "../Button/InfoButton/InfoButton";
+import {DisabledButton} from "../Button/showcase/DisabledButton";
+import {SuccessButton} from "../Button/showcase/SuccessButton";
+import {InfoButton} from "../Button/showcase/InfoButton";
+import ShowcaseSection from "../common/ShowcaseSection";
+import {ShowcaseItem} from "../common/ShowcaseItem";
 
 function App() {
     return (
@@ -11,32 +13,25 @@ function App() {
             <header className={styles.AppHeader}>
                 This is Header
             </header>
-            <section>
-                <h1>State</h1>
-                <p>
-                    Default
+            <ShowcaseSection title="State">
+                <ShowcaseItem title="Default">
                     <Button/>
-                </p>
-                <p>
-                    Disabled
+                </ShowcaseItem>
+                <ShowcaseItem title="Disabled">
                     <DisabledButton/>
-                </p>
-            </section>
-            <section>
-                <h1>Status</h1>
-                <p>
-                    Primary
+                </ShowcaseItem>
+            </ShowcaseSection>
+            <ShowcaseSection title="Status">
+                <ShowcaseItem title="Primary">
                     <Button/>
-                </p>
-                <p>
-                    Success
+                </ShowcaseItem>
+                <ShowcaseItem title="Success">
                     <SuccessButton/>
-                </p>
-                <p>
-                    Info
+                </ShowcaseItem>
+                <ShowcaseItem title="Info">
                     <InfoButton/>
-                </p>
-            </section>
+                </ShowcaseItem>
+            </ShowcaseSection>
         </div>
     );
 }
