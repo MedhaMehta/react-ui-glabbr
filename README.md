@@ -1,2 +1,0 @@
-# react-ui-glabbr
-Testing
